@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "qipu"
+version = "0.1.0"
+description = ""
+authors = ["Volney Casas <volneyrock@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pre-commit = "^3.5.0"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.2"
+flask = "^3.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Busca por ICAO</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Busca por ICAO</h1>
+        <form action="" method="post">
+            <label for="icao">ICAO</label>
+            <input type="text" name="icao" id="icao" placeholder="Informe o ICAO">
+            <input type="submit" value="Buscar">
+        </form>
+        <hr>
+        {% if dados_ais %}
+            <h2>Dados de {{ dados_ais['icao'] }}</h2>
+            <p>METAR: {{ dados_ais['metar'] }}</p>
+            <p>TAF: {{ dados_ais['taf'] }}</p>
+            <p>Nascer do sol: {{ dados_ais['nascer_do_sol'] }}</p>
+            <p>Pôr do sol: {{ dados_ais['por_do_sol'] }}</p>
+            <hr>
+            <h2>Cartas</h2>
+            <ul>
+                {% for carta in dados_ais['cartas'] %}
+                    <li><a href="{{ carta['link'] }}" target="_blank">{{ carta['nome'] }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
