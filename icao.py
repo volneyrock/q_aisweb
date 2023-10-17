@@ -27,7 +27,7 @@ class AisWeb:
             response = requests.get(url)
             response.raise_for_status()
             html = response.text
-            soup = BeautifulSoup(html, 'html.parser')
+            soup = BeautifulSoup(html, "html.parser")
             return soup
         except requests.exceptions.RequestException as e:
             raise AisWebRequestException(f"Erro na requisição: {e}")
@@ -67,11 +67,10 @@ class AisWeb:
             )
 
     def cartas(self):
-        Carta = namedtuple('Carta', ['nome', 'link'])
+        Carta = namedtuple("Carta", ["nome", "link"])
         cartas = []
         cartas_ul = self.soup.find_all(
-            "ul",
-            class_="list list-icons list-primary list-icons-style-2"
+            "ul", class_="list list-icons list-primary list-icons-style-2"
         )
         for ul in cartas_ul:
             cartas_li = ul.find_all("li")

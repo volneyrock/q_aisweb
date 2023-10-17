@@ -35,4 +35,4 @@ Siga estas etapas para executar o aplicativo em um contêiner Docker:
    docker-compose up -d
    ```
 
-- Agora, seu aplicativo Flask estará em execução e será acessível em http://localhost:5000. 
+- Agora, seu aplicativo Flask estará em execução e será acessível em http://localhost:5000.
