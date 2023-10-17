@@ -16,7 +16,7 @@ Siga estas etapas para executar o aplicativo em um contêiner Docker:
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/seu-projeto-flask-docker.git
+   git clone https://github.com/volneyrock/q_aisweb.git
 
 2. **Construa a imagem Docker:**
 
